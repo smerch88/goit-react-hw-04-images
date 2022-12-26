@@ -1,3 +1,5 @@
+import style from './Form.module.css';
+
 import { fetchImages } from '../services/api';
 import { useState, useEffect } from 'react';
 import { Form } from './Form';
@@ -19,9 +21,9 @@ export const ImageSearch = () => {
   }, [submittedName]);
 
   return (
-    <>
+    <div className={style.App}>
       <Form onSubmit={setSubmittedName} />
       <Gallery images={images} />
-    </>
+    </div>
   );
 };
