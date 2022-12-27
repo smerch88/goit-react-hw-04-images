@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import style from './Form.module.css';
+import style from './styles/Searchbar.module.css';
 
 export const Form = ({ onSubmit }) => {
   const [inputValue, setInputValue] = useState('');
@@ -12,9 +12,11 @@ export const Form = ({ onSubmit }) => {
 
   return (
     <>
-      <div className={style.Searchbar}>
+      <header className={style.Searchbar}>
         <form onSubmit={handleSubmit} className={style.SearchForm}>
-          <label className={style.SearchFormButtonLabel}></label>
+          <button type="submit" className={style.SearchFormButton}>
+            <span className={style.SearchFormButtonLabel}></span>
+          </button>
           <input
             className={style.SearchFormInput}
             type="text"
@@ -25,9 +27,8 @@ export const Form = ({ onSubmit }) => {
               setInputValue(event.target.value);
             }}
           />
-          <button type="submit" className={style.SearchFormButton}></button>
         </form>
-      </div>
+      </header>
     </>
   );
 };
