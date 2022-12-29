@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import style from './styles/Searchbar.module.css';
+import PropTypes from 'prop-types';
 
 export const Form = ({ onSubmit }) => {
   const [inputValue, setInputValue] = useState('');
@@ -31,4 +32,8 @@ export const Form = ({ onSubmit }) => {
       </header>
     </>
   );
+};
+
+Form.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };

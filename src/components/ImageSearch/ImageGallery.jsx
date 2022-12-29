@@ -3,6 +3,7 @@ import style from './styles/ImageGallery.module.css';
 import { Modal } from './Modal';
 import { useState } from 'react';
 import { Loader } from './Loader';
+import PropTypes from 'prop-types';
 
 export const ImageGallery = ({ images, isLoad }) => {
   const [clikedImageId, setClikedImageId] = useState(0);
@@ -47,4 +48,9 @@ export const ImageGallery = ({ images, isLoad }) => {
       )}
     </>
   );
+};
+
+ImageGallery.propTypes = {
+  images: PropTypes.array.isRequired,
+  isLoad: PropTypes.bool.isRequired,
 };

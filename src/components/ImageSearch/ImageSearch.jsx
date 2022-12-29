@@ -18,6 +18,7 @@ export const ImageSearch = () => {
 
   const handleSubmit = inputValue => {
     setSubmittedName(inputValue);
+    setSubmittedNumber(1);
     setImages([]);
   };
 

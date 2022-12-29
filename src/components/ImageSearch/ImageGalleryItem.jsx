@@ -1,4 +1,5 @@
 import style from './styles/ImageGalleryItem.module.css';
+import PropTypes from 'prop-types';
 
 export const ImageGalleryItem = ({ src, dataid, alt }) => {
   return (
@@ -14,4 +15,10 @@ export const ImageGalleryItem = ({ src, dataid, alt }) => {
       </li>
     </>
   );
+};
+
+ImageGalleryItem.prototypes = {
+  src: PropTypes.array.isRequired,
+  dataid: PropTypes.array.isRequired,
+  alt: PropTypes.array.isRequired,
 };
